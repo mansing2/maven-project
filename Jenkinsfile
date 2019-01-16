@@ -1,10 +1,11 @@
 pipeline
 {
-	agent { label 'docker-slave' }
+	agent any
 	stages
 		{
 			stage ('build')
 			{
+				agent { label 'docker-slave' }
 				steps{
 					echo 'build'
 				}
