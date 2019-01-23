@@ -14,7 +14,7 @@ pipeline {
 		}
 		stage ('deploy to QA') {
 			steps {
-				build job: 'Practice1-Deploy-QA'
+				build job: 'Practice-Deploy-QA'
 			}
 		}
 	}
