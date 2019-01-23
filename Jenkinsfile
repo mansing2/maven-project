@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	stages {
 		stage ('build') {
-			step {
+			steps {
 				sh 'mvn clean package'
 			}
 			post {
@@ -13,7 +13,7 @@ pipeline {
 			}
 		}
 		stage ('deploy to QA') {
-			step {
+			steps {
 				build job: 'Practice1-Deploy-QA'
 			}
 		}
